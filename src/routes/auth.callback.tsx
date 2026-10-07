@@ -22,6 +22,10 @@ export const Route = createFileRoute("/auth/callback")({
     meta: [
       { title: "جارٍ تسجيل الدخول · coopai" },
       { name: "description", content: "إكمال تسجيل الدخول باستخدام Google." },
+      { property: "og:title", content: "جارٍ تسجيل الدخول · coopai" },
+      { property: "og:description", content: "إكمال تسجيل الدخول باستخدام Google." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AuthCallbackPage,

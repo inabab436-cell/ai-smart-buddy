@@ -36,12 +36,12 @@ function useSite() {
 }
 
 /** Header identity: store logo, name and its public link (replaces the generic label). */
-export function SiteIdentity({ fallbackLogo }: { fallbackLogo: string }) {
+export function SiteIdentity() {
   const { data: s } = useSite();
 
   return (
     <div className="flex min-w-0 items-center gap-3">
-      <img src={s?.logo_url || fallbackLogo} alt="" className="h-10 w-10 shrink-0 rounded-full border border-border object-cover" />
+      {s?.logo_url ? <img src={s.logo_url} alt="" className="h-10 w-10 shrink-0 rounded-full border border-border object-cover" /> : null}
       <div className="min-w-0">
         <div className="truncate text-sm font-bold leading-tight">{s?.brand_name || "متجرك"}</div>
         <div className="text-xs text-muted-foreground">لوحة التحكم</div>

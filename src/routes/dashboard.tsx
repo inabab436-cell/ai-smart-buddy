@@ -10,7 +10,6 @@ import {
 
 import { HubTabBar } from "@/components/hub/hub-shell";
 import { MerchantProfileMenu } from "@/components/hub/merchant-profile-menu";
-import logo from "@/assets/cupai-logo.png.asset.json";
 import { SiteIdentity, SiteSettingsButton, SiteLinkCard } from "@/components/website/site-link-bar";
 import { useHubBadges, badgeText } from "@/lib/hub-badges";
 
@@ -73,7 +72,6 @@ function DashboardPage() {
     <div dir="rtl" className="hub hub-dashboard min-h-screen pb-24 lg:pb-0">
       <aside className="fixed inset-y-0 right-0 z-30 hidden w-64 border-l border-border bg-card p-5 lg:flex lg:flex-col">
         <Link to="/" className="mb-8 flex items-center gap-3 px-2">
-          <img src={logo.url} alt="cupai" className="h-10 w-10 shrink-0 rounded-lg" />
           <span>
             <span className="block text-sm font-bold">متجرك</span>
             <span className="hub-latin block text-[10px] text-muted-foreground">CUPAI</span>
@@ -99,7 +97,7 @@ function DashboardPage() {
       <div className="lg:mr-64">
         <header className="sticky top-0 z-20 border-b border-border bg-card/90 backdrop-blur-xl">
           <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
-            <SiteIdentity fallbackLogo={logo.url} />
+            <SiteIdentity />
             <div className="flex shrink-0 items-center gap-2">
               <SiteSettingsButton />
               <MerchantProfileMenu />

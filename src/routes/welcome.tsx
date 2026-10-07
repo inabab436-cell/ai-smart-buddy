@@ -6,7 +6,6 @@ import {
   Package, PartyPopper, Store, Truck,
 } from "lucide-react";
 
-import logo from "@/assets/cupai-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -110,7 +109,6 @@ function WelcomePage() {
       <header className="border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-2xl items-center justify-between px-4">
           <div className="flex items-center gap-2">
-            <img src={logo.url} alt="coopai" className="h-9 w-9 rounded-lg" />
             <span className="text-sm font-bold">coopai</span>
           </div>
           {step < 3 ? (

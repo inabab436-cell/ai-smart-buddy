@@ -15,7 +15,14 @@ import {
 import { setPublished } from "@/lib/publish.functions";
 
 export const Route = createFileRoute("/shipping")({
-  head: () => ({ meta: [{ title: "جدول الشحن · cupai" }] }),
+  head: () => ({ meta: [
+    { title: "جدول الشحن · cupai" },
+    { name: "description", content: "إدارة مناطق التوصيل وتكاليف الشحن ومدد التسليم." },
+    { property: "og:title", content: "جدول الشحن · cupai" },
+    { property: "og:description", content: "إدارة مناطق التوصيل وتكاليف الشحن ومدد التسليم." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+  ] }),
   component: ShippingPage,
 });
 

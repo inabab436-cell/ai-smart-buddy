@@ -5,7 +5,6 @@ import {
   ArrowLeft, BadgePercent, Check, Crown, CreditCard, LayoutGrid, Link2, Package, ShoppingBag, Truck,
 } from "lucide-react";
 
-import logo from "@/assets/cupai-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { getSessionInfo } from "@/lib/auth.functions";
 
@@ -54,7 +53,6 @@ function Index() {
       <header className="sticky top-0 z-20 border-b border-border bg-card/90 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2">
-            <img src={logo.url} alt="coopai" className="h-9 w-9 rounded-lg" />
             <span className="text-base font-extrabold">coopai</span>
           </div>
           <div className="flex items-center gap-2">
