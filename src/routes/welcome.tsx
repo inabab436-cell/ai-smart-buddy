@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import {
   ArrowLeft, ArrowRight, Check, CreditCard, ImagePlus, Loader2,
-  Package, PartyPopper, Sparkles, Store, Truck,
+  Package, PartyPopper, Store, Truck,
 } from "lucide-react";
 
 import logo from "@/assets/cupai-logo.png.asset.json";
@@ -127,9 +127,6 @@ function WelcomePage() {
         <div key={step} className="mt-8 animate-in fade-in slide-in-from-bottom-2 duration-300">
           {step === 0 && (
             <section className="text-center">
-              <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-primary/10 text-primary">
-                <Sparkles className="h-8 w-8" />
-              </div>
               <h1 className="mt-5 text-2xl font-extrabold sm:text-3xl">أهلاً بك في coopai 👋</h1>
               <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
                 خلال دقيقتين سنجهّز متجرك معًا. كل خطوة يمكنك تعديلها لاحقًا في أي وقت.

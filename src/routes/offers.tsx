@@ -42,7 +42,7 @@ export const Route = createFileRoute("/offers")({
       { property: "og:title", content: "العروض والخصومات · cupai" },
       {
         property: "og:description",
-        content: "عروض وخصومات مرتبطة بمدة حقيقية، والوكيل الذكي متصل بها لحظياً.",
+        content: "عروض وخصومات مرتبطة بمدة حقيقية.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -570,7 +570,7 @@ function OffersPage() {
                 rows={2}
                 value={form.description ?? ""}
                 onChange={(e) => setForm({ ...form, description: e.target.value })}
-                placeholder="شروط أو تفاصيل إضافية يعرفها الوكيل الذكي."
+                placeholder="شروط أو تفاصيل إضافية."
               />
               
             </div>

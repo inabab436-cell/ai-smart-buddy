@@ -11,9 +11,9 @@ export const Route = createFileRoute("/chat/$slug")({
     return {
       meta: [
         { title: `محادثة العملاء — ${brand}` },
-        { name: "description", content: `دردشة عملاء ${brand} المتصلة بالوكيل الذكي.` },
+        { name: "description", content: `دردشة عملاء ${brand}.` },
         { property: "og:title", content: `محادثة العملاء — ${brand}` },
-        { property: "og:description", content: `دردشة عملاء ${brand} المتصلة بالوكيل الذكي.` },
+        { property: "og:description", content: `دردشة عملاء ${brand}.` },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "robots", content: "noindex" },
