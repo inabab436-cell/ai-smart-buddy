@@ -17,7 +17,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import logo from "@/assets/cupai-logo.png.asset.json";
 import {
   createPaymentMethod,
   deletePaymentMethod,
@@ -176,7 +175,6 @@ function PaymentMethodsPage() {
       <header className="sticky top-0 z-10 border-b border-border/60 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo.url} alt="cupai" className="h-8 w-8 rounded-lg shadow-card" />
             <span className="text-sm font-semibold tracking-tight">cupai</span>
           </Link>
           <Button asChild variant="ghost" size="sm">

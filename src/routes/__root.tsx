@@ -13,7 +13,6 @@ import { Toaster } from "sonner";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import logoAsset from "@/assets/cupai-logo.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -80,15 +79,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "coopai — وكيل ذكاء اصطناعي يردّ على عملائك" },
-      { name: "description", content: "coopai منصة ذكاء اصطناعي متكاملة تُدير محادثات عملائك وتردّ عليهم بكفاءة على مدار الساعة." },
+      { title: "coopai — إدارة محادثات العملاء" },
+      { name: "description", content: "coopai منصة لإدارة محادثات العملاء." },
       { name: "author", content: "cupai" },
-      { property: "og:title", content: "coopai — وكيل ذكاء اصطناعي يردّ على عملائك" },
-      { property: "og:description", content: "coopai منصة ذكاء اصطناعي متكاملة تُدير محادثات عملائك وتردّ عليهم بكفاءة على مدار الساعة." },
+      { property: "og:title", content: "coopai — إدارة محادثات العملاء" },
+      { property: "og:description", content: "coopai منصة لإدارة محادثات العملاء." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "coopai — وكيل ذكاء اصطناعي يردّ على عملائك" },
-      { name: "twitter:description", content: "coopai منصة ذكاء اصطناعي متكاملة تُدير محادثات عملائك وتردّ عليهم بكفاءة على مدار الساعة." },
+      { name: "twitter:title", content: "coopai — إدارة محادثات العملاء" },
+      { name: "twitter:description", content: "coopai منصة لإدارة محادثات العملاء." },
     ],
     links: [
       {

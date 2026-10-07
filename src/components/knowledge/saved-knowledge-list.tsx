@@ -8,7 +8,6 @@ import {
   Trash2,
   Check,
   X,
-  ShieldCheck,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -79,11 +78,6 @@ export function SavedKnowledgeList() {
           {rows.length} معلومة
         </span>
       </header>
-      <p className="mb-3 flex items-start gap-1 text-[11px] leading-relaxed text-muted-foreground">
-        <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" />
-        كل معلومة هنا محفوظة بشكل دائم ويقرأها الوكيل مباشرة في كل محادثة. أي
-        تعديل أو حذف ينعكس على ردود الوكيل فوراً.
-      </p>
 
       {q.isLoading && (
         <div className="flex items-center gap-2 text-xs text-muted-foreground">

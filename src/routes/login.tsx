@@ -24,6 +24,8 @@ export const Route = createFileRoute("/login")({
       { name: "description", content: "سجّل الدخول أو أنشئ حسابك في coopai بالبريد الإلكتروني." },
       { property: "og:title", content: "تسجيل الدخول · coopai" },
       { property: "og:description", content: "سجّل الدخول أو أنشئ حسابك في coopai." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: LoginPage,

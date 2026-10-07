@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { ArrowRight, BedDouble, Check, Moon } from "lucide-react";
+import { ArrowRight, Check, Clock } from "lucide-react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/awaiting-payment")({
       { property: "og:title", content: "بانتظار استكمال الدفع · cupai" },
       {
         property: "og:description",
-        content: "تابع العملاء الذين ينتظرون تأكيد الدفع واستأنف الوكيل الذكي بضغطة واحدة.",
+        content: "تابع العملاء الذين ينتظرون تأكيد الدفع.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -71,9 +71,9 @@ function AwaitingPaymentPage() {
         );
         return;
       }
-      toast.success("تم تأكيد الدفع وخصم الكميات — عاد الوكيل للرد على هذه المحادثة.");
+      toast.success("تم تأكيد الدفع وخصم الكميات.");
     },
-    onError: (e: any) => toast.error(e?.message || "تعذر استئناف الوكيل."),
+    onError: (e: any) => toast.error(e?.message || "تعذر تأكيد الدفع."),
   });
 
   const rows = (q.data ?? []).filter((c) => c.awaiting_payment);
@@ -83,7 +83,7 @@ function AwaitingPaymentPage() {
       <header className="sticky top-0 z-10 border-b border-border/60 bg-background/70 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-4xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2 text-sm font-semibold">
-            <Moon className="h-4 w-4 text-amber-500" />
+            <Clock className="h-4 w-4 text-amber-500" />
             عملاء بانتظار استكمال الدفع
           </div>
           <Button asChild variant="ghost" size="sm">
@@ -104,20 +104,11 @@ function AwaitingPaymentPage() {
             </span>
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            هؤلاء العملاء أتموا الطلب واختاروا طريقة دفع يدوية، والوكيل نائم 😴 في محادثاتهم
-            حتى تؤكد استلام الدفع.
+            هؤلاء العملاء أتموا الطلب واختاروا طريقة دفع يدوية وينتظرون تأكيد استلام الدفع.
           </p>
         </section>
 
         <div className="rounded-2xl border border-amber-500/40 bg-amber-500/5 p-4 shadow-card backdrop-blur-sm">
-          <p className="mb-3 flex items-start gap-2 text-xs leading-relaxed text-amber-700 dark:text-amber-400">
-            <BedDouble className="mt-0.5 h-4 w-4 shrink-0" />
-            <span>
-              الوكيل نائم 😴 في هذه المحادثات ولا يرد على العميل حتى تؤكد الدفع.
-              <br />
-              بعد الضغط على «تأكيد الدفع» سيعود الوكيل للاستمرار في هذه المحادثة.
-            </span>
-          </p>
 
           {q.isError && (
             <div className="rounded-xl border border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
@@ -147,8 +138,8 @@ function AwaitingPaymentPage() {
                         <div className="flex items-center gap-2">
                           <span className="truncate text-sm font-semibold">{displayName}</span>
                           <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] text-muted-foreground">
-                            <Moon className="h-3 w-3" />
-                            الوكيل نائم
+                            <Clock className="h-3 w-3" />
+                            بانتظار تأكيد الدفع
                           </span>
                           <span className="ms-auto text-[11px] text-muted-foreground">
                             {formatTime(c.last_message_at ?? c.created_at)}

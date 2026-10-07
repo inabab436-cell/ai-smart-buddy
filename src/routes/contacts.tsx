@@ -12,7 +12,14 @@ import {
 } from "@/lib/content.functions";
 
 export const Route = createFileRoute("/contacts")({
-  head: () => ({ meta: [{ title: "معلومات التواصل · cupai" }] }),
+  head: () => ({ meta: [
+    { title: "معلومات التواصل · cupai" },
+    { name: "description", content: "إدارة بيانات الاتصال وروابط التواصل الخاصة بمتجرك." },
+    { property: "og:title", content: "معلومات التواصل · cupai" },
+    { property: "og:description", content: "إدارة بيانات الاتصال وروابط التواصل الخاصة بمتجرك." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+  ] }),
   component: ContactsPage,
 });
 

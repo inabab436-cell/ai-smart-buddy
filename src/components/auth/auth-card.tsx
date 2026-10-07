@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/cupai-logo.png.asset.json";
 
 export function AuthCard({
   title,
@@ -18,7 +17,6 @@ export function AuthCard({
     <div dir="rtl" className="hub grid min-h-screen bg-background lg:grid-cols-2">
       <aside className="relative hidden overflow-hidden bg-gradient-brand p-12 lg:flex lg:flex-col lg:justify-between">
         <div className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="coopai" className="h-12 w-12 rounded-xl bg-card object-contain p-1 shadow-elegant" />
           <span className="text-xl font-extrabold text-primary-foreground">coopai</span>
         </div>
         <div className="space-y-4">
@@ -34,7 +32,6 @@ export function AuthCard({
       <main className="flex items-center justify-center px-5 py-10 sm:px-10">
         <div className="w-full max-w-sm">
           <div className="mb-10 flex items-center gap-3 lg:hidden">
-            <img src={logoAsset.url} alt="coopai" className="h-12 w-12 rounded-xl bg-card object-contain p-1 shadow-elegant" />
             <span className="text-xl font-extrabold tracking-tight text-gradient-brand">coopai</span>
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-foreground">{title}</h1>
