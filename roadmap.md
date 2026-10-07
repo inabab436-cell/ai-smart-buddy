@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Audit and remove site-visible AI/agent references and explicit imagery; report exact changes without altering functionality.
+
 - [x] Copy GitHub project files + install deps
 - [x] Fix preview/build errors
 - [x] Redesign the mobile dashboard shortcuts and add concise orders, active customers, and net pending earnings summaries
