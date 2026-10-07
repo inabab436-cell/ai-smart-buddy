@@ -357,12 +357,12 @@ function Thread({ id, onBack }: { id: string; onBack: () => void }) {
                       <span className="chat-meta rounded-full bg-card px-3 py-1 text-xs font-semibold shadow-sm">{dayLabel(m.created_at)}</span>
                     </div>
                   )}
-                  {/* Physical sides: merchant on the right, customer on the left. */}
-                  <div dir="ltr" className={`flex ${mine ? "justify-end" : "justify-start"} ${grouped ? "mt-1" : "mt-3"}`}>
+                  {/* Physical sides: merchant on the left, customer on the right. */}
+                  <div dir="ltr" className={`flex ${mine ? "justify-start" : "justify-end"} ${grouped ? "mt-1" : "mt-3"}`}>
                     <div
                       dir="rtl"
                       className={`max-w-[85%] rounded-2xl px-4 py-2.5 transition-opacity md:max-w-[70%] ${m.sending ? "opacity-70" : ""} ${
-                        mine ? `bubble-out ${grouped ? "" : "rounded-tr-md"}` : `bubble-in ${grouped ? "" : "rounded-tl-md"}`
+                        mine ? `bubble-out ${grouped ? "" : "rounded-tl-md"}` : `bubble-in ${grouped ? "" : "rounded-tr-md"}`
                       }`}
                     >
                       <p className="chat-text whitespace-pre-wrap break-words">{m.content}</p>
